@@ -3,106 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio นักศึกษา | GitHub.io</title>
+  <title>Portfolio ของศราวุธ แสงชาติ | GitHub.io</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      scroll-behavior: smooth;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-blue-700 text-white py-8 text-center shadow-lg">
-    <h1 class="text-4xl font-bold">Portfolio นักศึกษา</h1>
-    <p class="text-lg mt-2">GitHub.io - เว็บไซต์แนะนำตัวของฉัน</p>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="gradient-bg text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">🎓 Sarawut Portfolio</h1>
+      <div class="space-x-4 text-sm md:text-base">
+        <a href="#profile" class="hover:text-gray-200">แนะนำตัว</a>
+        <a href="#skills" class="hover:text-gray-200">ทักษะ</a>
+        <a href="#projects" class="hover:text-gray-200">ผลงาน</a>
+        <a href="#education" class="hover:text-gray-200">การศึกษา</a>
+        <a href="#contact" class="hover:text-gray-200">ติดต่อ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="gradient-bg text-white py-16 text-center shadow-lg">
+    <img src="profile.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-md mb-4">
+    <h2 class="text-4xl font-bold">นายศราวุธ แสงชาติ</h2>
+    <p class="text-lg mt-2 opacity-90">นักศึกษาคณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ ปี 3</p>
+    <p class="mt-3">“อยากพัฒนาเทคโนโลยีเพื่อช่วยให้โลกดีขึ้นด้วย Data และ AI”</p>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-10 space-y-14">
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
 
-    <!-- 1. Introduction -->
-    <section id="profile">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">1. แนะนำตัว (Introduction / Profile)</h2>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <img src="profile.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-300">
-        <p class="text-center font-bold text-xl">นายศราวุธ แสงชาติ</p>
-        <p class="text-center text-gray-500 mb-4">นักศึกษาคณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ</p>
-      </div>
-    </section>
-
-    <!-- 2. Skills -->
+    <!-- Skills -->
     <section id="skills">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">2. ทักษะ (Skills)</h2>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <p class="mb-2">ทักษะที่ถนัดและใช้งานได้จริง:</p>
-        <ul class="list-disc ml-6 space-y-1">
-          <li><strong>Programming:</strong> Java, HTML/CSS </li>
-          <li><strong>AI & Data:</strong> scikit-learn, SQL</li>
-          <li><strong>Tools:</strong> VS Code, Figma</li>
-          <li><strong>Soft Skills:</strong> การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</li>
-        </ul>
+      <h2 class="text-3xl font-semibold text-blue-700 mb-6">💡 ทักษะ (Skills)</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold text-lg mb-2">Programming</h3>
+          <p>Java, HTML, CSS</p>
+        </div>
+        <div class="card bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold text-lg mb-2">AI & Data</h3>
+          <p>scikit-learn, SQL</p>
+        </div>
+        <div class="card bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold text-lg mb-2">Tools</h3>
+          <p>VS Code, Figma</p>
+        </div>
+        <div class="card bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold text-lg mb-2">Soft Skills</h3>
+          <p>การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</p>
+        </div>
       </div>
     </section>
 
-    <!-- 3. Projects -->
+    <!-- Projects -->
     <section id="projects">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
-      <div class="bg-white p-6 rounded-xl shadow space-y-4">
-        <p>โปรเจกต์ที่เคยทำ เช่น:</p>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>เว็บไซต์ระบบจองสนามฟุตบอลออนไลน์</li>
-          <li>AI ทำนายเห็ดพิษด้วย Machine Learning</li>
-        </ul>
-        
+      <h2 class="text-3xl font-semibold text-blue-700 mb-6">🚀 ผลงานที่ผ่านมา (Projects)</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card bg-white p-4 rounded-xl shadow text-center">
+          <img src="project1.jpg" alt="Project 1" class="rounded-lg mb-3">
+          <h3 class="font-semibold text-lg">ระบบจองสนามฟุตบอลออนไลน์</h3>
+          <p class="text-sm text-gray-500 mt-1">เว็บแอปพลิเคชันจัดการสนามกีฬา</p>
+        </div>
+        <div class="card bg-white p-4 rounded-xl shadow text-center">
+          <img src="project2.jpg" alt="Project 2" class="rounded-lg mb-3">
+          <h3 class="font-semibold text-lg">เว็บไซต์ E-Commerce</h3>
+          <p class="text-sm text-gray-500 mt-1">ขายสินค้าออนไลน์ด้วย HTML/CSS/JS</p>
+        </div>
+        <div class="card bg-white p-4 rounded-xl shadow text-center">
+          <img src="project3.jpg" alt="Project 3" class="rounded-lg mb-3">
+          <h3 class="font-semibold text-lg">AI ทำนายเห็ดพิษ</h3>
+          <p class="text-sm text-gray-500 mt-1">ใช้ Machine Learning จำแนกเห็ดปลอดภัย</p>
+        </div>
       </div>
     </section>
 
-    <!-- 4. Education -->
+    <!-- Education -->
     <section id="education">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">4. การศึกษา (Education)</h2>
+      <h2 class="text-3xl font-semibold text-blue-700 mb-6">🎓 การศึกษา (Education)</h2>
       <div class="bg-white p-6 rounded-xl shadow">
-        <p><strong>โรงเรียนพัฒนาศรีผดุงอุดมวิทย์</strong></p>
-        <p>จบการศึกษาในระดับปฐมศึกษา</p>
-        <p>----------------------------------------</p>
-        <p><strong>โรงเรียนบ้านดุงวิทยา</strong></p>
-        <p>จบการศึกษาในระดับมัธยมศึกษา</p>
-        <p>----------------------------------------</p>
-        <p><strong>มหาวิทยาลัยราชภัฏอุดรธานี</strong></p>
-        <p>คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ</p>
-        <p>ปีการศึกษา: 2566 - ปัจจุบัน</p>
+        <ul class="list-disc ml-6 space-y-2">
+          <li><strong>โรงเรียนพัฒนาศรีผดุงอุดมวิทย์</strong> - ระดับประถมศึกษา</li>
+          <li><strong>โรงเรียนบ้านดุงวิทยา</strong> - ระดับมัธยมศึกษา</li>
+          <li><strong>มหาวิทยาลัยราชภัฏอุดรธานี</strong> - คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ (2566 - ปัจจุบัน)</li>
+        </ul>
       </div>
     </section>
 
-    <!-- 5. Activities -->
+    <!-- Activities -->
     <section id="activities">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
+      <h2 class="text-3xl font-semibold text-blue-700 mb-6">🏆 กิจกรรมและผลงานอื่น ๆ</h2>
       <div class="bg-white p-6 rounded-xl shadow">
         <ul class="list-disc ml-6 space-y-2">
           <li>ผู้เข้าร่วมอบรม “AI for Beginners by Microsoft”</li>
-          <li>เข้าร่วมแข่งขัน UDRU Hackathon 2025</li>
-          <li>ได้รับรางวัลชนะเลิศโครงงานด้าน IoT</li>
+          <li>เข้าร่วมแข่งขัน UDRU Hackathon</li>
+          <li>อาสาพัฒนาเว็บไซต์ให้ชมรมในมหาวิทยาลัย</li>
         </ul>
       </div>
     </section>
 
-    <!-- 6. Contact -->
+    <!-- Contact -->
     <section id="contact">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">6. ติดต่อ (Contact)</h2>
-      <div class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-3xl font-semibold text-blue-700 mb-6">📞 ติดต่อ (Contact)</h2>
+      <div class="bg-white p-6 rounded-xl shadow space-y-2">
         <p>Email: <a href="mailto:66040233111@udru.ac.th" class="text-blue-600 underline">66040233111@udru.ac.th</a></p>
-        <p>GitHub: <a href="http://github.com/KIMM1CH" class="text-blue-600 underline">http://github.com/KIMM1CH</a></p>
+        <p>GitHub: <a href="https://github.com/KIMM1CH" class="text-blue-600 underline">github.com/KIMM1CH</a></p>
+        <p>จังหวัด: อุดรธานี</p>
       </div>
     </section>
 
-    <!-- 7. Career Interest -->
+    <!-- Career -->
     <section id="career">
-      <h2 class="text-2xl font-semibold text-blue-700 mb-4">7. องค์ประกอบเสริม (Career Interest)</h2>
+      <h2 class="text-3xl font-semibold text-blue-700 mb-6">🎯 เป้าหมายในอนาคต (Career Interest)</h2>
       <div class="bg-white p-6 rounded-xl shadow">
-        <p>เป้าหมายในอนาคต: อยากพัฒนาเส้นทางอาชีพด้าน <strong>Data Science</strong> 
-          และ <strong>IT Support</strong> เพื่อสร้างประโยชน์ให้กับองค์กรและสังคม</p>
+        <p>อยากพัฒนาเส้นทางอาชีพด้าน <strong>Data Science</strong> และ <strong>IT Support</strong> เพื่อสร้างคุณค่าให้กับองค์กรและสังคม</p>
       </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-blue-800 text-white text-center py-4 mt-10">
-    <p>© 2025 My Portfolio | Created with ❤️ by Me</p>
+  <footer class="gradient-bg text-white text-center py-4">
+    <p>© 2025 Sarawut Sangchat | Created with ❤️ by KIMM1CH</p>
   </footer>
+
 </body>
 </html>
